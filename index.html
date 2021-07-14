@@ -1,0 +1,335 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Ryan Miller</title>
+        <meta name="description" content="Portfolio">
+        <meta name="author" content="Ryan Miller">
+        <meta name="keywords" content="portfolio,planner,course planner,course,Monash,student,students">
+        <meta charset="UTF-8">
+        <meta property="og:title" content="Ryan Miller">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="Portfolio">
+        <meta property="og:url" content="https://www.imdb.com/title/tt0117500/">
+        <meta property="og:image" content="https://ia.media-imdb.com/images/rock.jpg">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/alignment.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <script src="https://kit.fontawesome.com/8874fa11a1.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+        <script>
+        checkdarkmode()        
+        </script>
+
+        <div class="position-absolute top-0 start-0">
+          <div class="btn-group dropend">
+            <button type="button" class="btn settingsbtn" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-gear-fill"></i>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu" style="width: 220px; padding: 8px;">
+                <li><button type="button" class="btn btn-primary" onclick="darkmodetoggle()">Toggle Dark/Light Mode</button></li>
+            </ul>
+        </div>
+        <button class="btn settingsbtn" onclick="location.reload();">
+          <i class="bi bi-house-fill"></i>
+      </button>
+      </div>
+
+
+        <div class="vertical-center">
+
+          <div id="index" class="container px-14">
+            <div class="row g-5">
+              
+              <div class="col">
+                <div class="contblock" style="background-image: url(images/tools.png);">
+                  <button class="fill btn midlayer" href="#" onclick="togglehide('index','tools')">
+                    <div class="center textholder">
+                      <h1>Tools & Apps</h1>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              
+              <div class="col">
+                <div class="contblock" style="background-image: url(images/projects.png);">
+                  <button class="fill btn midlayer" href="#" onclick="togglehide('index','projects')">
+                    <div class="center textholder">
+                      <h1>Projects</h1>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              
+              <div class="col">
+                <div class="contblock" style="background-image: url(images/aotor.png);">
+                  <button class="fill btn midlayer" href="#" onclick="togglehide('index','swrpg')">
+                    <div class="center textholder">
+                      <h1>Star Wars RPG</h1>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              
+              <div class="col">
+                <div class="contblock" style="background-image: url(images/astro.png);">
+                  <button class="fill btn midlayer" href="#" onclick="togglehide('index','astro')">
+                    <div class="center textholder">
+                      <h1>Astronomy</h1>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              
+              <div class="col">
+                <div class="contblock" style="background-image: url(images/science.jpg);">
+                  <button class="fill btn midlayer" href="#" onclick="togglehide('index','science')">
+                    <div class="center textholder">
+                      <h1>Science</h1>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              
+              <div class="col">
+                <div class="contblock" style="background-image: url(images/twitch.png);">
+                  <button class="fill btn midlayer" href="#" onclick="togglehide('index','gaming')">
+                    <div class="center textholder">
+                      <h1>Gaming</h1>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              
+
+            </div>
+          </div>
+
+
+          <div id="tools" class="container px-14" style="display: none;">
+            <div class="row g-5">
+              
+              <div class="col">
+                <div class="contblock" style="background-image: url(images/tools.png);">
+                  <button class="fill btn midlayer" href="#" onclick="togglehide('tools','index')">
+                    <div class="center textholder">
+                      <h1>POGGERS IT WORKS</h1>
+                    </div>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="projects" class="container px-14" style="display: none;">
+            <div class="row g-5">
+                
+              <div class="col">
+                <div class="contblock" style="background-image: url(images/tools.png);">
+                  <a role="button" class="fill btn midlayer" href="https://github.com/Aerilym">
+                    <div class="center textholder">
+                      <h1>Github</h1>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="contblock" style="background-image: url(images/tools.png);">
+                  <a role="button" class="fill btn midlayer" href="https://github.com/Aerilym/courseplancreator">
+                    <div class="center textholder">
+                      <h1>Monash Course Plan Creator</h1>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="contblock" style="background-image: url(images/tools.png);">
+                  <a role="button" class="fill btn midlayer" href="https://github.com/Aerilym">
+                    <div class="center textholder">
+                      <h1>Github</h1>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+          <div id="swrpg" class="container px-14" style="display: none;">
+            <div class="row g-5">
+              
+              <div class="col">
+                <div class="contblock" style="background-image: url(images/tools.png);">
+                  <button class="fill btn midlayer" href="#" onclick="togglehide('swrpg','podcasts')">
+                    <div class="center textholder">
+                      <h1>Podcasts</h1>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div class="col">
+                <div class="contblock" style="background-image: url(images/tools.png);">
+                  <button class="fill btn midlayer" href="#" onclick="togglehide('swrpg','content')">
+                    <div class="center textholder">
+                      <h1>Content</h1>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div class="col">
+                <div class="contblock" style="background-image: url(images/tools.png);">
+                  <button class="fill btn midlayer" href="#" onclick="togglehide('swrpg','maps')">
+                    <div class="center textholder">
+                      <h1>Maps</h1>
+                    </div>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          
+          <div id="podcasts" class="container podcast" style="display: none;">
+            <div class="container">
+              <div class="row justify-content-md-center podrow">
+                <div class="col-sm-4">
+                  <div class="socialicons">
+                    <a class="socialicon" href="https://twitter.com/AuditorsPodcast" role="button"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a class="socialicon" href="https://www.instagram.com/auditorspodcast/" role="button"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a class="socialicon" href="https://www.youtube.com/channel/UCQJaT5gVoalzBqlNhwq5T8Q" role="button"><i class="fab fa-youtube"></i></a>
+                    <a class="socialicon" href="https://www.reddit.com/r/AotOR/" role="button"><i class="fab fa-reddit-alien"></i></a>
+                    <a class="socialicon" href="https://open.spotify.com/show/0xEF4DiEIibOVgYC6PK7eP" role="button"><i class="fab fa-spotify"></i></a>
+                    <a class="socialicon" href="https://podcasts.apple.com/au/podcast/auditors-of-the-outer-rim/id1543140409" role="button"><i class="fab fa-apple"></i></a>
+                    <a class="socialicon" href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy50cmFuc2lzdG9yLmZtL2F1ZGl0b3JzLW9mLXRoZS1vdXRlci1yaW0=" role="button"><i class="fab fa-google"></i></a>
+                    <a class="socialicon" href="https://auditorspodcast.transistor.fm/subscribe" role="button"><i class="fas fa-podcast"></i></a>
+                  </div>
+                  <div>
+                    <img class="podcastimg" src="images/AotORV2-1000.png">
+                  </div>
+                </div>
+                <div class="col">
+                  <div>
+                    <iframe width="100%" height="270" frameborder="no" scrolling="yes" seamless src="https://share.transistor.fm/e/auditors-of-the-outer-rim/playlist/dark"></iframe>
+                  </div>
+                  <div>
+                  <ul>
+                    <li>Principle Cast - GM Ryan, Tom, Damo, Dan, Will</li>
+                    <li>Genre(s) and Style - Campaign, Story-Heavy, Comedy, Rules-Flexible</li>
+                    <li>About - Coming together out of necessity, this group of renegades escaped the grasp of their Hutt crime lord, stole his ship, liberated his slaves, and returned to end his reign. Their final escape from Tatooine caught the eye of the empire; narrowly avoiding destruction, they returned to Ryloth to seek help from those they saved. In exchange for future employment, their ship, renamed to The Auditor, was repaired and remade. The Auditors were born.</li>
+                  </ul>
+                </div>
+                </div>
+              </div>
+
+
+
+              <div class="row justify-content-md-center podrow">
+                <div class="col-sm-4">
+                  <div class="socialicons">
+                    <a class="socialicon" href="https://twitter.com/AuditorsPodcast" role="button"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a class="socialicon" href="https://www.instagram.com/auditorspodcast/" role="button"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a class="socialicon" href="https://www.youtube.com/channel/UCQJaT5gVoalzBqlNhwq5T8Q" role="button"><i class="fab fa-youtube"></i></a>
+                    <a class="socialicon" href="https://www.reddit.com/r/AotOR/" role="button"><i class="fab fa-reddit-alien"></i></a>
+                    <a class="socialicon" href="https://open.spotify.com/show/0xEF4DiEIibOVgYC6PK7eP" role="button"><i class="fab fa-spotify"></i></a>
+                    <a class="socialicon" href="https://podcasts.apple.com/au/podcast/auditors-of-the-outer-rim/id1543140409" role="button"><i class="fab fa-apple"></i></a>
+                    <a class="socialicon" href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy50cmFuc2lzdG9yLmZtL2F1ZGl0b3JzLW9mLXRoZS1vdXRlci1yaW0=" role="button"><i class="fab fa-google"></i></a>
+                    <a class="socialicon" href="https://auditorspodcast.transistor.fm/subscribe" role="button"><i class="fas fa-podcast"></i></a>
+                  </div>
+                  <div>
+                    <img class="podcastimg" src="images/TAA-1000.png">
+                  </div>
+                </div>
+                <div class="col">
+                  <div>
+                    <iframe width="100%" height="270" frameborder="no" scrolling="no" seamless src="https://share.transistor.fm/e/auditors-of-the-outer-rim/playlist/dark"></iframe>
+                  </div>
+                  <div>
+                  <ul>
+                    <li>Principle Cast - Ryan, Tom, Damo, Dan, Will <span style="font-size: x-small;"> *Cast and GM varies with oneshot</span></li>
+                    <li>Genre(s) and Style - Oneshot, Story-Heavy, Comedy, Rules-Flexible</li>
+                    <li>About - A collection of oneshot adventures and stories taking place in the background of the Auditors of the Outer Rim podcast.</li>
+                  </ul>
+                </div>
+                </div>
+              </div>
+
+
+
+
+            </div>
+          </div>
+
+
+
+
+          <div id="astro" class="container px-14" style="display: none;">
+            <div class="row g-5">
+              
+              <div class="col">
+                <div class="contblock" style="background-image: url(images/tools.png);">
+                  <button class="fill btn midlayer" href="#" onclick="togglehide('astro','index')">
+                    <div class="center textholder">
+                      <h1>POGGERS IT WORKSastro</h1>
+                    </div>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="science" class="container px-14" style="display: none;">
+            <div class="row g-5">
+              
+              <div class="col">
+                <div class="contblock" style="background-image: url(images/tools.png);">
+                  <button class="fill btn midlayer" href="#" onclick="togglehide('science','index')">
+                    <div class="center textholder">
+                      <h1>POGGERS IT WORscienceKS</h1>
+                    </div>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="gaming" class="container px-14" style="display: none;">
+            <div class="row g-5">
+              
+              <div class="col">
+                <div class="contblock" style="background-image: url(images/tools.png);">
+                  <button class="fill btn midlayer" href="#" onclick="togglehide('gaming','index')">
+                    <div class="center textholder">
+                      <h1>POGGERS IT WORKS gamoin</h1>
+                    </div>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+
+
+
+
+    </body>
+</html>
