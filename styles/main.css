@@ -103,3 +103,7 @@ body.darkmode .dropdown-menu {
   body.darkmode .dropdown-menu .dropdown-header {
     color: #adb5bd;
   }
+
+  .hideitem{
+      display: none;
+  }
