@@ -1,4 +1,4 @@
-function togglehide(item, item2) {
+function togglehide(item, item2='null') {
     var x = document.getElementById(item);
     var y = document.getElementById(item2);
     if (x.style.display === "none") {
