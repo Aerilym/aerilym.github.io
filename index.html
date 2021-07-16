@@ -28,6 +28,9 @@
         <script src="js/main.js"></script>
 
         <div class="lockedbuttons">
+          <a id="backbutton" class="btn settingsbtn hideitem" href="#" onclick="goBack()">
+            <i class="fas fa-backward"></i>
+          </a>
           <div class="btn-group dropend">
             <button type="button" class="btn settingsbtn" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="bi bi-gear-fill"></i>
@@ -36,7 +39,7 @@
                 <li><button id="darkmodebutton" type="button" class="btn btn-primary" onclick="darkmodetoggle()">Toggle Dark Mode</button></li>
             </ul>
         </div>
-        <a class="btn settingsbtn" href="#" onclick="home()">
+        <a class="btn settingsbtn" href="#" onclick="home();addbackbutton();">
           <i class="bi bi-house-fill"></i>
         </a>
         <a id="myBtn" class="btn settingsbtn">
@@ -80,7 +83,7 @@
               <div class="outermargin"></div>
               <div class="col">
                 <div class="contblock" style="background-image: url(images/tools.png);">
-                  <a class="fill btn midlayer" href="#tools" onclick="unfade('tools')">
+                  <a class="fill btn midlayer" href="#tools" onclick="unfade('tools');addbackbutton();">
                     <div class="center textholder">
                       <h1>Tools & Apps</h1>
                     </div>
@@ -90,7 +93,7 @@
               
               <div class="col">
                 <div class="contblock" style="background-image: url(images/projects.png);">
-                  <a class="fill btn midlayer" href="#projects" onclick="unfade('projects')">
+                  <a class="fill btn midlayer" href="#projects" onclick="unfade('projects');addbackbutton();">
                     <div class="center textholder">
                       <h1>Projects</h1>
                     </div>
@@ -100,7 +103,7 @@
               
               <div class="col">
                 <div class="contblock" style="background-image: url(images/aotor.png);">
-                  <a class="fill btn midlayer" href="#swrpg" onclick="unfade('swrpg')">
+                  <a class="fill btn midlayer" href="#swrpg" onclick="unfade('swrpg');addbackbutton();">
                     <div class="center textholder">
                       <h1>Star Wars RPG</h1>
                     </div>
@@ -110,7 +113,7 @@
               
               <div class="col">
                 <div class="contblock" style="background-image: url(images/astro.png);">
-                  <a class="fill btn midlayer" href="#astro" onclick="unfade('astro')">
+                  <a class="fill btn midlayer" href="#astro" onclick="unfade('astro');addbackbutton();">
                     <div class="center textholder">
                       <h1>Astronomy</h1>
                     </div>
@@ -120,7 +123,7 @@
               
               <div class="col hideitem">
                 <div class="contblock" style="background-image: url(images/twitch.png);">
-                  <a class="fill btn midlayer" href="#gaming" onclick="unfade('gaming')">
+                  <a class="fill btn midlayer" href="#gaming" onclick="unfade('gaming');addbackbutton();">
                     <div class="center textholder">
                       <h1>Gaming</h1>
                     </div>
@@ -225,7 +228,7 @@
 
               <div class="col">
                 <div class="contblock" style="background-image: url(images/AotORV2-1000.png);">
-                  <a class="fill btn midlayer" href="#podcasts" onclick="unfade('podcasts');fade('swrpg')">
+                  <a class="fill btn midlayer" href="#podcasts" onclick="unfade('podcasts');fade('swrpg');addbackbutton();">
                     <div class="center textholder">
                       <h1>Podcasts</h1>
                     </div>
@@ -234,7 +237,7 @@
               </div>
               <div class="col">
                 <div class="contblock" style="background-image: url(images/swrpgdestiny.png);">
-                  <a class="fill btn midlayer" href="#content" onclick="unfade('content');fade('swrpg')">
+                  <a class="fill btn midlayer" href="#content" onclick="unfade('content');fade('swrpg');addbackbutton();">
                     <div class="center textholder">
                       <h1>Content & Tools</h1>
                     </div>
@@ -243,7 +246,7 @@
               </div>
               <div class="col">
                 <div class="contblock" style="background-image: url(images/maps.png);">
-                  <a class="fill btn midlayer" href="#maps" onclick="unfade('maps');fade('swrpg')">
+                  <a class="fill btn midlayer" href="#maps" onclick="unfade('maps');fade('swrpg');addbackbutton();">
                     <div class="center textholder">
                       <h1>Maps</h1>
                     </div>

@@ -102,3 +102,14 @@ function fade(elementID){
     element.classList.add('faded')
   }
 }
+
+function addbackbutton(){
+  var backbutton = document.getElementById('backbutton')
+  if (backbutton.classList.contains('hideitem')){
+    backbutton.classList.remove('hideitem')
+  }
+}
+
+function goBack() {
+  window.history.back();
+}
