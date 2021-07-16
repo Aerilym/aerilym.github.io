@@ -35,24 +35,31 @@ function togglehide(item, item2='null') {
 
   function darkmodetoggle() {
       var myCookie = getCookie("darkmodepref");
+      darkmodebutton = document.getElementById('darkmodebutton')
       if (myCookie.includes('False')){
         document.cookie = "darkmodepref=True; expires=Thu, 18 Dec 2030 12:00:00 UTC";
+        darkmodebutton.innerText = 'Light Mode'
       } else if (myCookie.includes('True')){
         document.cookie = "darkmodepref=False; expires=Thu, 18 Dec 2030 12:00:00 UTC";
+        darkmodebutton.innerText = 'Dark Mode'
       }
       document.body.classList.toggle("darkmode");
       }
   function checkdarkmode() {
+    darkmodebutton = document.getElementById('darkmodebutton')
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
     var myCookie = getCookie("darkmodepref");
     if (myCookie == null){
           if (prefersDarkScheme.matches) {
                 document.cookie = "darkmodepref=True; expires=Thu, 18 Dec 2030 12:00:00 UTC";
                 document.body.classList.toggle("darkmode");
+                darkmodebutton.innerText = 'Light Mode'
           }
       } else if (myCookie.includes('True')){
         document.body.classList.toggle("darkmode");
+        darkmodebutton.innerText = 'Light Mode'
       } else {
+        darkmodebutton.innerText = 'Dark Mode'
         document.cookie = "darkmodepref=False; expires=Thu, 18 Dec 2030 12:00:00 UTC";
       }
   }

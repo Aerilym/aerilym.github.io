@@ -14,6 +14,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="styles/alignment.css">
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/modals.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
         <script src="https://kit.fontawesome.com/8874fa11a1.js" crossorigin="anonymous"></script>
     </head>
@@ -25,26 +26,58 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <script src="js/main.js"></script>
-        <script>
-        checkdarkmode()        
-        </script>
 
         <div class="lockedbuttons">
           <div class="btn-group dropend">
             <button type="button" class="btn settingsbtn" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="bi bi-gear-fill"></i>
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu" style="width: 220px; padding: 8px;">
-                <li><button type="button" class="btn btn-primary" onclick="darkmodetoggle()">Toggle Dark/Light Mode</button></li>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu" style="min-width:min-content; padding: 8px;">
+                <li><button id="darkmodebutton" type="button" class="btn btn-primary" onclick="darkmodetoggle()">Toggle Dark Mode</button></li>
             </ul>
         </div>
         <a class="btn settingsbtn" href="#">
           <i class="bi bi-house-fill"></i>
         </a>
+        <a id="myBtn" class="btn settingsbtn">
+          <i class="fas fa-address-card"></i>
+        </a>
       </div>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>About Me</h2>
+    </div>
+    <div class="modal-body">
+      <p>Coming Soon</p>
+    </div>
+    <div class="modal-footer">
+      <a class="btn settingsbtn" style="background-color: #7a27c2; font-weight: bold;" href="https://linktr.ee/Aerilym">
+        <i class="fas fa-link"></i> Links
+      </a>
+      <a class="btn settingsbtn" style="background-color: #7a27c2; font-weight: bold;" href="mailto:aerilymbiz@gmail.com">
+        <i class="fas fa-envelope"></i> Send me an Email
+      </a>
+      <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy me a coffee', '#7a27c2', 'Y8Y85AWOK');kofiwidget2.draw();</script>
+    </div>
+  </div>
+
+</div>
+
+
+        <div class="hscroll" scroll="no" style="overflow: hidden">
+          <!-- -------------------------------------PAGE START------------------------------------- -->
           <div id="index" class="container px-14 fillpage">
+            <div class="container">
             <div class="row g-5 vertical-center">
               
+              <div class="outermargin"></div>
               <div class="col">
                 <div class="contblock" style="background-image: url(images/tools.png);">
                   <a class="fill btn midlayer" href="#tools">
@@ -75,21 +108,11 @@
                 </div>
               </div>
               
-              <div class="col hideitem">
+              <div class="col">
                 <div class="contblock" style="background-image: url(images/astro.png);">
                   <a class="fill btn midlayer" href="#astro">
                     <div class="center textholder">
                       <h1>Astronomy</h1>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              
-              <div class="col hideitem">
-                <div class="contblock" style="background-image: url(images/science.jpg);">
-                  <a class="fill btn midlayer" href="#science">
-                    <div class="center textholder">
-                      <h1>Science</h1>
                     </div>
                   </a>
                 </div>
@@ -105,30 +128,47 @@
                 </div>
               </div>
               
-
+              <div class="outermargin"></div>
             </div>
           </div>
+        </div>
 
-
+          <!-- -------------------------------------PAGE START------------------------------------- -->
           <div id="tools" class="container px-14 fillpage">
-            <div class="row g-5 vertical-center">
-              
-              <div class="col">
-                <div class="contblock" style="background-image: url(images/swrpgdestiny.png);">
-                  <a role="button" class="fill btn midlayer" href="https://aerilym.github.io/SWRPG-Destiny-Point-Tracker/">
-                    <div class="center textholder">
-                      <h1>SWRPG Destiny Point Tracker</h1>
-                    </div>
-                  </a>
+            <div class="container">
+              <div class="row g-5 vertical-center">
+                
+                <div class="col">
+                  <div class="contblock" style="background-image: url(images/tools.png);">
+                    <a role="button" class="fill btn midlayer" href="https://github.com/Aerilym/courseplancreator">
+                      <div class="center textholder">
+                        <h1>Monash Course Plan Creator</h1>
+                      </div>
+                    </a>
+                  </div>
                 </div>
-              </div>
 
+                <div class="col">
+                  <div class="contblock" style="background-image: url(images/swrpgdestiny.png);">
+                    <a role="button" class="fill btn midlayer" href="https://github.com/Aerilym/SWRPG-Destiny-Point-Tracker">
+                      <div class="center textholder">
+                        <h1>SWRPG Destiny Point Tracker</h1>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
             </div>
           </div>
 
+          <!-- -------------------------------------PAGE START------------------------------------- -->
           <div id="projects" class="container px-14 fillpage">
+            
+            <div class="container">
             <div class="row g-5 vertical-center">
                 
+              <div class="outermargin"></div>
               <div class="col">
                 <div class="contblock" style="background-image: url(images/github.png);">
                   <a role="button" class="fill btn midlayer" href="https://github.com/Aerilym">
@@ -159,13 +199,30 @@
                 </div>
               </div>
 
+              <div class="col">
+                <div class="contblock" style="background-image: url(images/buttontemplate.png);">
+                  <a role="button" class="fill btn midlayer" href="https://github.com/Aerilym/HAL">
+                    <div class="center textholder">
+                      <h1>HAL (Discord Bot)</h1>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="outermargin"></div>
 
             </div>
           </div>
+          </div>
 
+          <!-- -------------------------------------PAGE START------------------------------------- -->
+          <div>
           <div id="swrpg" class="container px-14 fillpage">
+            
+            <div class="container">
             <div class="row g-5 vertical-center">
-              
+
+              <div class="outermargin"></div>
+
               <div class="col">
                 <div class="contblock" style="background-image: url(images/AotORV2-1000.png);">
                   <a class="fill btn midlayer" href="#podcasts">
@@ -193,12 +250,13 @@
                   </a>
                 </div>
               </div>
+              <div class="outermargin"></div>
 
             </div>
           </div>
+          </div>
 
-          
-          <div id="podcasts" class="container podcast fillpage">
+          <div id="podcasts" class="container podcast fillpage" scroll="yes">
             <div class="container">
               <div class="row justify-content-md-center podrow">
                 <div class="col-sm-4">
@@ -243,7 +301,7 @@
                     <a class="socialicon" href="https://podcasts.apple.com/au/podcast/auditors-of-the-outer-rim/id1543140409" role="button"><i class="fab fa-apple"></i></a>
                     <a class="socialicon" href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy50cmFuc2lzdG9yLmZtL2F1ZGl0b3JzLW9mLXRoZS1vdXRlci1yaW0=" role="button"><i class="fab fa-google"></i></a>
                     <a class="socialicon" href="https://auditorspodcast.transistor.fm/subscribe" role="button"><i class="fas fa-podcast"></i></a>
-                    <h1 style="font-size: 180px;">COMING SOON</h1>
+                    <div class="commingsoon">COMING SOON</div>
                   </div>
                   <div>
                     <img class="podcastimg" src="images/TAA-1000.png">
@@ -271,7 +329,7 @@
 
 
 
-          <div id="content" class="container podcast fillpage">
+          <div id="content" class="container podcast fillpage" scroll="yes">
             <div class="container">
               <div class="row justify-content-md-center podrow">
                 <div class="col-sm-4">
@@ -293,10 +351,10 @@
               <div class="row justify-content-md-center podrow">
                 <div class="col-sm-4">
                   <div class="socialicons">
-                    <h1 style="font-size: 180px;">COMING SOON</h1>
+                    <div class="commingsoon">COMING SOON</div>
                   </div>
                   <div>
-                    <a href="https://aerilym.github.io/SWRPG-Destiny-Point-Tracker/"><img class="podcastimg" src="images/.png"></a>
+                    <a href="https://aerilym.github.io/SWRPG-Destiny-Point-Tracker/"><img class="podcastimg" src="images/buttontemplate.png"></a>
                   </div>
                 </div>
                 <div class="col">
@@ -315,7 +373,7 @@
 
 
 
-          <div id="maps" class="container podcast fillpage">
+          <div id="maps" class="container podcast fillpage" scroll="yes">
             <div class="container">
               <div class="row justify-content-md-center podrow">
                 <div class="col-sm-4">
@@ -328,10 +386,10 @@
                     <a class="socialicon" href="https://podcasts.apple.com/au/podcast/auditors-of-the-outer-rim/id1543140409" role="button"><i class="fab fa-apple"></i></a>
                     <a class="socialicon" href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy50cmFuc2lzdG9yLmZtL2F1ZGl0b3JzLW9mLXRoZS1vdXRlci1yaW0=" role="button"><i class="fab fa-google"></i></a>
                     <a class="socialicon" href="https://auditorspodcast.transistor.fm/subscribe" role="button"><i class="fas fa-podcast"></i></a>
-                    <h1 style="font-size: 180px;">COMING SOON</h1>
+                    <div class="commingsoon">COMING SOON</div>
                   </div>
                   <div>
-                    <img class="podcastimg" src="images/.png">
+                    <img class="podcastimg" src="images/buttontemplate.png">
                   </div>
                 </div>
                 <div class="col">
@@ -344,66 +402,79 @@
                 </div>
               </div>
 
-
-
-
             </div>
           </div>
+        </div>
 
-
-
-
-
+          <!-- -------------------------------------PAGE START------------------------------------- -->
           <div id="astro" class="container px-14 fillpage">
-            <div class="row g-5">
-              
-              <div class="col">
-                <div class="contblock" style="background-image: url(images/.png);">
-                  <button class="fill btn midlayer" href="#">
-                    <div class="center textholder">
-                      <h1>IN PROGRESS</h1>
-                    </div>
-                  </button>
+            <div class="container">
+              <div class="row g-5 vertical-center">
+                
+                <div class="col">
+                  <div class="contblock" style="background-image: url(images/astro.png);">
+                    <a role="button" class="fill btn midlayer" href="images/astro.png">
+                      <div class="center textholder">
+                        <h1>Astrophotography</h1>
+                      </div>
+                    </a>
+                  </div>
                 </div>
-              </div>
 
+                <div class="col">
+                  <div class="contblock" style="background-image: url(images/buttontemplate.png);">
+                    <a role="button" class="fill btn midlayer" href="#">
+                      <div class="center textholder">
+                        <h1>Astrophysics</h1>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
             </div>
           </div>
 
-          <div id="science" class="container px-14 fillpage">
-            <div class="row g-5">
-              
-              <div class="col">
-                <div class="contblock" style="background-image: url(images/.png);">
-                  <button class="fill btn midlayer" href="#">
-                    <div class="center textholder">
-                      <h1>IN PROGRESS</h1>
-                    </div>
-                  </button>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
+          <!-- -------------------------------------PAGE START------------------------------------- -->
           <div id="gaming" class="container px-14 fillpage">
-            <div class="row g-5">
-              
-              <div class="col">
-                <div class="contblock" style="background-image: url(images/.png);">
-                  <button class="fill btn midlayer" href="#">
-                    <div class="center textholder">
-                      <h1>IN PROGRESS</h1>
-                    </div>
-                  </button>
+            <div class="container">
+              <div class="row g-5 vertical-center">
+                
+                <div class="col">
+                  <div class="contblock" style="background-image: url(images/buttontemplate.png);">
+                    <a role="button" class="fill btn midlayer" href="https://github.com/Aerilym/courseplancreator">
+                      <div class="center textholder">
+                        <h1>TBD</h1>
+                      </div>
+                    </a>
+                  </div>
                 </div>
-              </div>
 
+                <div class="col">
+                  <div class="contblock" style="background-image: url(images/buttontemplate.png);">
+                    <a role="button" class="fill btn midlayer" href="https://github.com/Aerilym/SWRPG-Destiny-Point-Tracker">
+                      <div class="center textholder">
+                        <h1>TBD</h1>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
             </div>
           </div>
 
 
 
 
+
+        </div>
+          
+
+
+          <script>
+            checkdarkmode()        
+            </script>
+      <script src="js/modals.js"></script>
     </body>
 </html>
