@@ -66,3 +66,39 @@ function togglehide(item, item2='null') {
   function clickID(itemid) {
     document.getElementById(itemid).click();
   }
+
+function togglefade(elementID){
+    var element = document.getElementById(elementID)
+    if (element.classList.contains('faded')){
+      element.classList.remove('faded')
+    } else {
+      element.classList.add('faded')
+    }
+}
+
+function home(){
+  var buttoncontainters = document.getElementsByClassName('fillpage')
+  var arrayLength = buttoncontainters.length;
+  for (var i = 0; i < arrayLength; i++) {
+    if (buttoncontainters[i].id == 'index'){
+      continue
+    }
+    if (!buttoncontainters[i].classList.contains('faded')){
+      buttoncontainters[i].classList.add('faded')
+    }
+  }
+}
+
+function unfade(elementID){
+  var element = document.getElementById(elementID)
+  if (element.classList.contains('faded')){
+    element.classList.remove('faded')
+  }
+}
+
+function fade(elementID){
+  var element = document.getElementById(elementID)
+  if (!element.classList.contains('faded')){
+    element.classList.add('faded')
+  }
+}
