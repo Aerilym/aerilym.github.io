@@ -113,3 +113,16 @@ function addbackbutton(){
 function goBack() {
   window.history.back();
 }
+
+function ismobile(){
+  console.log(window.outerWidth)
+    return ( ( window.outerWidth <= 900 ));
+}
+
+function mobilefix(){
+  var hscroller = document.getElementById('hscroller')
+  if (ismobile()) {
+    console.log('is')
+    hscroller.classList.remove("hscroll");   
+  }
+}
